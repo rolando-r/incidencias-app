@@ -1,7 +1,6 @@
 namespace Dominio;
-public class Periferico
+public class Periferico : BaseEntityA
 {
-    public int IdPeriferico { get; set; }
-    public DetalleIncidencia  DetalleIncidencia { get; set; }
     public string NombrePeriferico { get; set; }
+    public ICollection<DetalleIncidencia> DetalleIncidencias  { get; set; }
 }

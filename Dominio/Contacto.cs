@@ -1,7 +1,6 @@
 namespace Dominio;
-public class Contacto
+public class Contacto : BaseEntityA
 {
-    public int IdContacto { get; set; }
     public string DescripcionContacto { get; set; }
     public int IdUsuario { get; set; }
     public Usuario Usuario { get; set; }

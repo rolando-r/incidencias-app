@@ -1,7 +1,6 @@
 namespace Dominio;
-public class NivelIncidencia
+public class NivelIncidencia : BaseEntityA
 {
-    public int IdNivelIncidencia { get; set; }
     public string NombreNivelIncidencia { get; set; }
     public string DescripcionNivelIncidencia { get; set; }
     public ICollection<DetalleIncidencia> DetalleIncidencias { get; set; }

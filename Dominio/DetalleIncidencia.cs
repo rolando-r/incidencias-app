@@ -1,7 +1,6 @@
 namespace Dominio;
-public class DetalleIncidencia
+public class DetalleIncidencia : BaseEntityA
 {
-    public int IdDetalleIncidencia { get; set; }
     public string DescripcionDetalleIncidencia { get; set; }
     public int IdIncidencia { get; set; }
     public Incidencia Incidencia { get; set; }
