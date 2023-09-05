@@ -12,7 +12,7 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.Property(p => p.Id)
                 .IsRequired();
                 
-        builder.Property(p => p.NombreUsuario)
+        builder.Property(p => p.Username)
                 .IsRequired()
                 .HasMaxLength(100);
         

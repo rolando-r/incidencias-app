@@ -1,7 +1,7 @@
 namespace Dominio;
 public class Usuario : BaseEntityA
 {
-    public string NombreUsuario { get; set; }
+    public string Username { get; set; }
     public string ApellidoUsuario { get; set; }
     public string DireccionUsuario { get; set; }
     public int IdTipoDocumento { get; set; }
@@ -12,4 +12,6 @@ public class Usuario : BaseEntityA
     public ICollection<Contacto> Contactos { get; set; }
     public ICollection<AreaUsuario> AreaUsuarios { get; set; }
     public ICollection<Incidencia> Incidencias { get; set; }
+    public ICollection<Rol> Roles { get; set; } = new HashSet<Rol>();
+    public ICollection<UsuariosRoles> UsuariosRoles { get; set; }
 }
