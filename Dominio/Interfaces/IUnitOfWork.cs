@@ -18,5 +18,6 @@ public interface IUnitOfWork
     ITipoIncidenciaRepository TipoIncidencias { get; }
     IRolRepository Roles { get; }
     IUsuarioRepository Usuarios { get; }
+    IPersonaRepository Personas { get; }
     Task<int> SaveAsync();
 }

@@ -21,6 +21,7 @@ namespace Aplicacion.UnitOfWork
         private TipoDocumentoRepository _tipoDocumentos;
         private TipoIncidenciaRepository _tipoIncidencias;
         private IUsuarioRepository _usuarios;
+        private IPersonaRepository _personas; 
         public UnitOfWork(IncidenciasContext _context)
         {
             context = _context;
@@ -177,6 +178,17 @@ namespace Aplicacion.UnitOfWork
                     _roles = new RolRepository(context);
                 }
                 return _roles;
+            }
+        }
+        public IPersonaRepository Personas
+        {
+            get
+            {
+                if (_personas == null)
+                {
+                    _personas = new PersonaRepository(context);
+                }
+                return _personas;
             }
         }
         public IUsuarioRepository Usuarios
