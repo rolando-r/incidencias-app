@@ -1,7 +1,7 @@
 namespace Dominio;
 public class Rol : BaseEntityA
 {
-    public string NombreRol { get; set; }
+    public string Nombre { get; set; }
     public string DescripcionRol { get; set; }
     public ICollection<Usuario> Usuarios { get; set; } = new HashSet<Usuario>();
     public ICollection<UsuariosRoles> UsuariosRoles { get; set; }

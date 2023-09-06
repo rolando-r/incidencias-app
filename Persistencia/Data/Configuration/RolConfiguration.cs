@@ -12,8 +12,12 @@ public class RolConfiguration : IEntityTypeConfiguration<Rol>
         builder.Property(p => p.Id)
                 .IsRequired();
                 
-        builder.Property(p => p.NombreRol)
+        builder.Property(p => p.Nombre)
                 .IsRequired()
-                .HasMaxLength(200);
+                .HasMaxLength(100);
+
+        builder.Property(p => p.DescripcionRol)
+                .IsRequired()
+                .HasMaxLength(100);
     }
 }

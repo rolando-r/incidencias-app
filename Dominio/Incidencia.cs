@@ -3,8 +3,8 @@ public class Incidencia : BaseEntityA
 {
     public DateTime Fecha { get; set; }
     public string DescripcionIncidencia { get; set; }
-    public int IdUsuario { get; set; }
-    public Usuario Usuario { get; set; }
+    public int IdPersona { get; set; }
+    public Persona Persona { get; set; }
     public int IdEstado { get; set; }
     public Estado Estado { get; set; }
     public int IdArea { get; set; }

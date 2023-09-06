@@ -9,6 +9,7 @@ namespace Persistencia
         {
         }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Persona> Personas { get; set; }
         public DbSet<TipoIncidencia> TipoIncidencias { get; set; }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Rol> Roles { get; set; }
@@ -21,7 +22,7 @@ namespace Persistencia
         public DbSet<TipoContacto> TipoContactos { get; set; }
         public DbSet<Contacto> Contactos { get; set; }
         public DbSet<CategoriaContacto> CategoriaContactos { get; set; }
-        public DbSet<AreaUsuario> AreaUsuarios { get; set; }
+        public DbSet<AreaPersona> AreaPersonas { get; set; }
         public DbSet<Area> Areas { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)

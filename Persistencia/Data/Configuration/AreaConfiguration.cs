@@ -20,20 +20,20 @@ public class AreaConfiguration : IEntityTypeConfiguration<Area>
         .HasMaxLength(100);
 
         builder
-            .HasMany(p => p.Usuarios)
+            .HasMany(p => p.Personas)
             .WithMany(p => p.Areas)
-            .UsingEntity<AreaUsuario>(
+            .UsingEntity<AreaPersona>(
                 j => j
-                    .HasOne(pt => pt.Usuario)
-                    .WithMany(t => t.AreaUsuarios)
-                    .HasForeignKey(pt => pt.IdUsuario),
+                    .HasOne(pt => pt.Persona)
+                    .WithMany(t => t.AreaPersonas)
+                    .HasForeignKey(pt => pt.IdPersona),
                 j => j
                     .HasOne(pt => pt.Area)
-                    .WithMany(p => p.AreaUsuarios)
+                    .WithMany(p => p.AreaPersonas)
                     .HasForeignKey(pt => pt.IdArea),
                 j =>
                 {
-                    j.HasKey(t => new { t.IdArea, t.IdUsuario });
+                    j.HasKey(t => new { t.IdArea, t.IdPersona });
                 });
     }
 }

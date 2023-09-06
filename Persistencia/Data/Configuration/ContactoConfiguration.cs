@@ -17,9 +17,9 @@ public class ContactoConfiguration : IEntityTypeConfiguration<Contacto>
         .HasMaxLength(100);
 
     
-        builder.HasOne(y => y.Usuario)
+        builder.HasOne(y => y.Persona)
         .WithMany(l => l.Contactos)
-        .HasForeignKey(z => z.IdUsuario)
+        .HasForeignKey(z => z.IdPersona)
         .IsRequired();
 
         builder.HasOne(y => y.TipoContacto)

@@ -20,9 +20,9 @@ public class IncidenciaConfiguration : IEntityTypeConfiguration<Incidencia>
         .IsRequired()
         .HasMaxLength(200);
 
-        builder.HasOne(y => y.Usuario)
+        builder.HasOne(y => y.Persona)
         .WithMany(l => l.Incidencias)
-        .HasForeignKey(z => z.IdUsuario)
+        .HasForeignKey(z => z.IdPersona)
         .IsRequired();
 
         builder.HasOne(y => y.Estado)
