@@ -1,14 +1,13 @@
-using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Application.Repository;
-public class PerifericoRepository : GenericRepositoryB<Periferico>, IPerifericoRepository
+namespace Aplicacion.Repository
 {
-    private readonly IncidenciasContext _context;
-    public PerifericoRepository(IncidenciasContext context) : base(context)
+    public class PerifericoRepository : GenericRepositoryB<Periferico>, IPerifericoRepository
     {
-        _context = context;
+        public PerifericoRepository(IncidenciasContext context) : base(context)
+        {
+        }
     }
 }

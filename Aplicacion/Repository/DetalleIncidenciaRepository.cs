@@ -1,14 +1,13 @@
-using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Application.Repository;
-public class DetalleIncidenciaRepository : GenericRepositoryB<DetalleIncidencia>, IDetalleIncidenciaRepository
+namespace Aplicacion.Repository
 {
-    private readonly IncidenciasContext _context;
-    public DetalleIncidenciaRepository(IncidenciasContext context) : base(context)
+    public class DetalleIncidenciaRepository : GenericRepositoryB<DetalleIncidencia>, IDetalleIncidenciaRepository
     {
-        _context = context;
+        public DetalleIncidenciaRepository(IncidenciasContext context) : base(context)
+        {
+        }
     }
 }

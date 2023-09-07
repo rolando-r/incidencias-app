@@ -1,14 +1,13 @@
-using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Application.Repository;
-public class EstadoRepository : GenericRepositoryB<Estado>, IEstadoRepository
+namespace Aplicacion.Repository
 {
-    private readonly IncidenciasContext _context;
-    public EstadoRepository(IncidenciasContext context) : base(context)
+    public class EstadoRepository : GenericRepositoryB<Estado>, IEstadoRepository
     {
-        _context = context;
+        public EstadoRepository(IncidenciasContext context) : base(context)
+        {
+        }
     }
 }

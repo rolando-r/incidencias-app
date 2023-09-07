@@ -1,14 +1,13 @@
-using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Application.Repository;
-public class LugarRepository : GenericRepositoryB<Lugar>, ILugarRepository
+namespace Aplicacion.Repository
 {
-    private readonly IncidenciasContext _context;
-    public LugarRepository(IncidenciasContext context) : base(context)
+    public class LugarRepository : GenericRepositoryB<Lugar>, ILugarRepository
     {
-        _context = context;
+        public LugarRepository(IncidenciasContext context) : base(context)
+        {
+        }
     }
 }

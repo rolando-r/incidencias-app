@@ -1,14 +1,13 @@
-using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Application.Repository;
-public class PersonaRepository : GenericRepositoryB<Persona>, IPersonaRepository
+namespace Aplicacion.Repository
 {
-    private readonly IncidenciasContext _context;
-    public PersonaRepository(IncidenciasContext context) : base(context)
+    public class PersonaRepository : GenericRepositoryB<Persona>, IPersonaRepository
     {
-        _context = context;
+        public PersonaRepository(IncidenciasContext context) : base(context)
+        {
+        }
     }
 }
