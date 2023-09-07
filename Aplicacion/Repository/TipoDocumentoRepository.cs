@@ -1,13 +1,14 @@
+using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Aplicacion.Repository
+namespace Application.Repository;
+public class TipoDocumentoRepository : GenericRepositoryB<TipoDocumento>, ITipoDocumentoRepository
 {
-    public class TipoDocumentoRepository : GenericRepositoryB<TipoDocumento>, ITipoDocumentoRepository
+    private readonly IncidenciasContext _context;
+    public TipoDocumentoRepository(IncidenciasContext context) : base(context)
     {
-        public TipoDocumentoRepository(IncidenciasContext context) : base(context)
-        {
-        }
+        _context = context;
     }
 }

@@ -1,13 +1,14 @@
+using Aplicacion.Repository;
 using Dominio;
 using Dominio.Interfaces;
 using Persistencia;
 
-namespace Aplicacion.Repository
+namespace Application.Repository;
+public class CategoriaContactoRepository : GenericRepositoryB<CategoriaContacto>, ICategoriaContactoRepository
 {
-    public class CategoriaContactoRepository : GenericRepositoryB<CategoriaContacto>, ICategoriaContactoRepository
+    private readonly IncidenciasContext _context;
+    public CategoriaContactoRepository(IncidenciasContext context) : base(context)
     {
-        public CategoriaContactoRepository(IncidenciasContext context) : base(context)
-        {
-        }
+        _context = context;
     }
 }
