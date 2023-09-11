@@ -8,7 +8,7 @@ namespace Aplicacion.Repository;
 
 public class GenericRepositoryB<T> : IGenericRepositoryB<T> where T : BaseEntityA
 {
-    private readonly IncidenciasContext _context;
+    protected readonly IncidenciasContext _context;
 
     public GenericRepositoryB(IncidenciasContext context)
     {
