@@ -18,7 +18,7 @@ The objective of this practice project is to provide you with hands-on experienc
 
 ## 🛠 Skills
 
-C#, .NETCore
+C#, .NETCore, Refresh Token
 
 ## 📖 How to Use This Guide
 1. Start by cloning this repository to your local machine.
