@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using API.Dtos;
 using ApiIncidencias.Dtos;
 using ApiIncidencias.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -66,6 +67,13 @@ public class UsuariosController : BaseApiController
     public async Task<IActionResult> AddRoleAsync(AddRoleDto model)
     {
         var result = await _userService.AddRoleAsync(model);
+        return Ok(result);
+    }
+
+    [HttpPost("refresh")]
+    public async Task<IActionResult> GetTokenAsync(AuthenticationTokenResultDto model)
+    {
+        var result = await _userService.GetTokenAsync(model);
         return Ok(result);
     }
 }

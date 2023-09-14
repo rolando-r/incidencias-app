@@ -12,4 +12,6 @@ public class DetalleIncidencia : BaseEntityA
     public NivelIncidencia NivelIncidencia { get; set; }
     public int IdEstado { get; set; }
     public Estado Estado { get; set; }
+    public int IdArea { get; set; }
+    public Area Area { get; set; }
 }

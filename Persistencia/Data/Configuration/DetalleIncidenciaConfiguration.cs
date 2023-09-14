@@ -40,5 +40,10 @@ public class DetalleIncidenciaConfiguration : IEntityTypeConfiguration<DetalleIn
         .WithMany(l => l.DetalleIncidencias)
         .HasForeignKey(z => z.IdEstado)
         .IsRequired();
+
+        builder.HasOne(y => y.Area)
+        .WithMany(l => l.DetalleIncidencias)
+        .HasForeignKey(z => z.IdArea)
+        .IsRequired();
     }
 }
